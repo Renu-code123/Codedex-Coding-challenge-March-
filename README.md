@@ -1,4 +1,3 @@
-# Codedex-Coding-challenge
 # 🐍 Codédex Daily Challenge – March
 
 ![Python](https://img.shields.io/badge/Language-Python-blue?style=for-the-badge&logo=python)
