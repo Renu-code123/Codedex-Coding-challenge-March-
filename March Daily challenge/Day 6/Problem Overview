@@ -1,0 +1,54 @@
+##Problem Overview
+## 🧠 Problem Overview
+
+This challenge is inspired by **Sputnik 9**, a Soviet spacecraft launched on **March 9, 1961** during the Space Race.
+
+The mission carried a mannequin named **Ivan Ivanovich**, a female dog named **Chernushka**, along with mice and a guinea pig. The spacecraft successfully completed one orbit around Earth and safely returned to the surface.
+
+The challenge simulates the **reentry of the spacecraft through Earth's atmospheric layers**.
+
+Each atmospheric layer has a **different descent rate**, meaning the capsule slows down as it moves into denser parts of the atmosphere.
+
+The goal is to calculate the **total time required for the capsule to descend from a given altitude to Earth's surface**.
+
+##Problem Details:
+## 📘 Problem Details
+
+The Earth's atmosphere is divided into five layers:
+
+| Layer | Altitude Range (km) | Descent Rate |
+|------|--------------------|-------------|
+| Exosphere | 700 – 10,000 km | 2000 m/s |
+| Thermosphere | 85 – 700 km | 500 m/s |
+| Mesosphere | 50 – 85 km | 200 m/s |
+| Stratosphere | 12 – 50 km | 75 m/s |
+| Troposphere | 0 – 12 km | 20 m/s |
+
+Given a **starting altitude (in kilometers)**, calculate the **total descent time in seconds**.
+
+##Approach:-
+## ⚙️ Approach
+
+To solve this problem:
+
+1. Define each atmospheric layer with:
+   - lower boundary
+   - upper boundary
+   - descent rate
+
+2. Loop through each layer from **highest to lowest**.
+
+3. For each layer:
+   - Determine how much distance the spacecraft travels within that layer.
+   - Convert kilometers to meters.
+
+4. Calculate the descent time using:
+
+time = distance / rate
+
+
+5. Add the time for each layer to get the **total descent time**.
+
+6. Round the final result to **one decimal place**.
+
+The spacecraft passes through multiple layers, and the descent speed changes depending on the atmospheric density.
