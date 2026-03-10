@@ -1,0 +1,57 @@
+# 📞 Ring Ring – Unique Word Counter
+
+## Problem
+Given a phone call transcript as a string, count the number of **unique words** in the transcript.
+
+Words are separated by spaces.  
+Punctuation should be ignored, and words should be treated the same regardless of capitalization.
+
+### Example
+
+Input:
+"Mr. Watson, come here, I want to see you."
+
+Output:
+9
+
+---
+
+## Idea
+
+The key idea behind the solution is to normalize the text and then identify unique words.
+
+To do this:
+- Convert all characters to **lowercase** so words like `Hello` and `hello` are treated the same.
+- Remove punctuation such as commas, periods, and quotation marks.
+- Split the cleaned text into individual words.
+- Use a **set** in Python to store only unique words.
+
+Since sets automatically remove duplicates, counting the elements in the set gives the number of unique words.
+
+---
+
+## Approach
+
+1. Convert the transcript to lowercase.
+2. Remove punctuation characters.
+3. Split the sentence into words using spaces.
+4. Store the words in a `set` to remove duplicates.
+5. Return the length of the set.
+
+---
+
+## Python Solution
+
+```python
+import string
+
+def find_unique_words(transcript):
+    transcript = transcript.lower()
+
+    for p in string.punctuation:
+        transcript = transcript.replace(p, "")
+
+    words = transcript.split()
+    unique_words = set(words)
+
+    return len(unique_words)
