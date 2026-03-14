@@ -1,0 +1,47 @@
+# 🥧 Pi Day Challenge – Codédex Daily Challenge (March 14, 2026)
+
+March 14 is celebrated worldwide as **Pi Day**, honoring the mathematical constant **π (pi)** because the date **3/14** represents the first digits of π (3.14).
+
+To celebrate Pi Day, Codédex released a fun challenge related to **pie and math!**
+
+---
+
+## 📌 Problem
+
+You and your friends are sharing a delicious pie at a bakery.
+
+You know:
+- The **diameter of the pie**
+- The **number of friends**
+
+The pie needs to be cut into equal slices so that everyone gets the same amount of crust.
+
+Your task is to calculate **how much crust (circumference) each friend receives**.
+
+The formula for circumference is:
+
+C = π × d
+
+Where:
+- **C** = circumference  
+- **π** ≈ 3.14159  
+- **d** = diameter of the pie
+
+After calculating the circumference, divide it equally among the friends.
+
+The final answer should be **rounded to 2 decimal places**.
+
+---
+
+## 📥 Input
+
+- `diameter` → diameter of the pie (in inches)
+- `friends` → number of friends sharing the pie
+
+---
+
+## 📤 Output
+
+- Crust length each friend receives (in inches)
+
+---
