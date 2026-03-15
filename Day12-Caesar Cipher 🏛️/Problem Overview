@@ -1,0 +1,58 @@
+# Caesar Cipher Decoder 🏛️
+
+## 📌 Problem Overview
+A **Caesar Cipher** is one of the simplest encryption techniques. It works by shifting each letter in a message by a fixed number of positions in the alphabet.
+
+For example, with a shift of **3**:
+
+a → d  
+b → e  
+c → f  
+
+The alphabet wraps around at the end:
+
+x → a  
+y → b  
+z → c  
+
+In this problem, we are given an **encoded message** and a **shift value**.  
+Our task is to **decode the message** by shifting each letter **backwards** by the given shift amount.
+
+The message contains only:
+- lowercase letters (`a-z`)
+- spaces
+
+Spaces should remain unchanged.
+
+---
+
+## 💡 Approach
+
+1. Create an empty string to store the decoded message.
+2. Traverse through each character of the encoded message.
+3. Check if the character is a space:
+   - If yes, keep it unchanged.
+4. If the character is a letter:
+   - Convert the character to its ASCII value using `ord()`.
+   - Shift it backwards by the given shift value.
+   - Use modulo `% 26` to handle wrap-around cases.
+   - Convert the result back to a character using `chr()`.
+5. Append the decoded character to the result string.
+6. Return the final decoded message.
+
+---
+
+## ⚙️ Implementation (Python)
+
+```python
+def decode_message(message, shift):
+    decoded = ""
+
+    for char in message:
+        if char == " ":
+            decoded += " "
+        else:
+            new_char = chr((ord(char) - ord('a') - shift) % 26 + ord('a'))
+            decoded += new_char
+
+    return decoded
