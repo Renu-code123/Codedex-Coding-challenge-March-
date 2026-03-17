@@ -1,0 +1,49 @@
+# ☘️ Green Chicago River – Codédex Daily Challenge
+
+## 📌 Problem Overview
+Every year, the Chicago River is dyed green for St. Patrick's Day.
+
+You are given:
+- `river`: a list of emojis  
+  - '💧' → water  
+  - '☘️' → dye  
+- `hours`: number of hours passed  
+
+Each hour, the dye (☘️) spreads **one step to the right**.
+
+### 🎯 Goal:
+Return the final state of the river after `hours`.
+
+---
+
+## 💡 Idea
+Instead of moving ☘️, think of it as **spreading color**.
+
+Each ☘️:
+- Stays in its position  
+- Spreads to the next `hours` positions on the right  
+
+---
+
+## ⚙️ Approach
+1. Create a result array filled with '💧'
+2. Traverse the river:
+   - If you find '☘️' at index `i`
+   - Mark positions from `i` to `i + hours` as '☘️'
+3. Make sure not to go out of bounds
+
+---
+
+## 💻 Code (Python)
+
+```python
+def lucky_river(river, hours):
+    n = len(river)
+    result = ['💧'] * n
+    
+    for i in range(n):
+        if river[i] == '☘️':
+            for j in range(i, min(i + hours + 1, n)):
+                result[j] = '☘️'
+    
+    return result
