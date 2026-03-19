@@ -1,0 +1,73 @@
+# 🏀 March Madness – Codédex Daily Challenge (Day 19)
+
+## 📌 Problem Overview
+In March Madness, teams compete based on seed rankings. Lower seed number = stronger team, higher seed = weaker team (underdog).
+
+### 🎯 Task
+Given matchups like:
+["Team A", seedA, "Team B", seedB]
+
+Return a list of upset probabilities.
+
+### 📐 Formula
+upset_probability = lower_seed / (higher_seed + lower_seed)
+
+---
+
+## 🧠 Example
+
+Input:
+matchups = [
+  ["Duke", 1, "Siena", 16],
+  ["Ohio State", 8, "TCU", 9]
+]
+
+Output:
+[0.06, 0.47]
+
+---
+
+## 💡 Approach
+- Loop through each matchup
+- Extract seed values
+- Find:
+  - lower_seed = min(seed1, seed2)
+  - higher_seed = max(seed1, seed2)
+- Apply formula
+- Round to 2 decimal places
+- Store result
+
+---
+
+## 🧮 Solution (Python)
+
+def upset_probability(matchups):
+    result = []
+    
+    for match in matchups:
+        seed1 = match[1]
+        seed2 = match[3]
+        
+        lower_seed = min(seed1, seed2)
+        higher_seed = max(seed1, seed2)
+        
+        prob = lower_seed / (higher_seed + lower_seed)
+        
+        result.append(round(prob, 2))
+    
+    return result
+
+---
+
+## ⏱️ Complexity
+Time Complexity: O(n)  
+Space Complexity: O(n)
+
+---
+
+## 🚀 Key Insights
+- Always identify lower and higher seed correctly
+- Use min() and max() to avoid edge cases
+- Rounding is important
+
+---
