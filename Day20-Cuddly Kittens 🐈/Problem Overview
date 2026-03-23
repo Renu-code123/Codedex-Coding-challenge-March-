@@ -1,0 +1,69 @@
+# 🐈 Cuddly Kittens – Daily Challenge
+
+## 📌 Problem Overview
+
+It's **National Cuddly Kitten Day** 🐾 and you're helping kittens line up in a cozy play area!
+
+Each kitten has an **energy level**, and they can only stay calm if their energy levels are similar. If the difference gets too big, chaos begins 😿
+
+---
+
+## 🧠 Problem Statement
+
+You are given:
+
+- An array `kittens[]` where `kittens[i]` represents the energy level of the i-th kitten  
+- An integer `limit` representing the maximum allowed difference between energy levels in a group  
+
+A group of **consecutive kittens** is considered **calm** if:
+max(kittens in group) - min(kittens in group) <= limit
+
+
+**Explanation:**  
+All kittens can stay together since  
+→ `5 - 2 = 3 ≤ 10`
+
+---
+
+## 💡 Approach
+
+### 🔹 Sliding Window Technique
+
+- Use two pointers to maintain a window of consecutive kittens  
+- Track the **minimum** and **maximum** energy efficiently  
+- Expand the window when valid  
+- Shrink the window when the condition breaks  
+
+---
+
+## 🧩 Optimized Solution (Python)
+
+```python
+from collections import deque
+
+def cuddly_kittens(kittens, limit):
+    max_d = deque()
+    min_d = deque()
+    
+    left = 0
+    result = 0
+    
+    for right in range(len(kittens)):
+        while max_d and kittens[right] > max_d[-1]:
+            max_d.pop()
+        max_d.append(kittens[right])
+        
+        while min_d and kittens[right] < min_d[-1]:
+            min_d.pop()
+        min_d.append(kittens[right])
+        
+        while max_d[0] - min_d[0] > limit:
+            if kittens[left] == max_d[0]:
+                max_d.popleft()
+            if kittens[left] == min_d[0]:
+                min_d.popleft()
+            left += 1
+        
+        result = max(result, right - left + 1)
+    
+    return result
