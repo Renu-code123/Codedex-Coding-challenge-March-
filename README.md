@@ -54,7 +54,36 @@ Day-04
 Day-31  
 
 ---
+## Progress Tracker
 
+| Day   | Date       | Problem | Status |
+|------|------------|--------|--------|
+| Day 1 | 02-03-2026 | Wordle 🟩 | Pending |
+| Day 2 | 03-03-2026 | Blood Moon 🩸 | Pending |
+| Day 3 | 04-03-2026 | Holi 🌈 | Completed |
+| Day 4 | 05-03-2026 | Homebrew Computer Club 🤓 | Completed |
+| Day 5 | 06-03-2026 | Alysa Liu 🛼 | Completed |
+| Day 6 | 07-03-2026 | Daylight Savings ⏰ | Completed |
+| Day 7 | 08-03-2026 | International Women's Day 💖 | Completed |
+| Day 8 | 09-03-2026 | Sputnik 9 🚀 | Completed |
+| Day 9 | 10-03-2026 | Ring Ring ☎️ | Completed |
+| Day 10 | 11-03-2026 | Hitchhiker's Guide 🪐 | Completed |
+| Day 11 | 12-03-2026 | World Wide Web 🌐 | Completed |
+| Day 12 | 13-03-2026 | Palindrome 🚗 | Completed |
+| Day 13 | 14-03-2026 | Pi Day 🥧 | Completed |
+| Day 14 | 15-03-2026 | Caesar Cipher 🏛️ | Completed |
+| Day 15 | 16-03-2026 | Oscars 2026 🏆 | Completed |
+| Day 16 | 17-03-2026 | Green Chicago River 🍀 | Completed |
+| Day 17 | 18-03-2026 | Flight Vouchers ✈️ | Completed |
+| Day 18 | 19-03-2026 | March Madness 🏀 | Completed |
+| Day 19 | 20-03-2026 | Cherry Blossoms 🌸 | Completed |
+| Day 20 | 21-03-2026 | First Tweet 🐦 | Completed |
+| Day 21 | 22-03-2026 | Water Day 💧 | Completed |
+| Day 22 | 23-03-2026 | Cuddly Kittens 🐱 | Completed |
+| Day 23 | 24-03-2026 | Earthquake Anomaly 🌍 | Completed |
+| Day 24 | 25-03-2026 | Opening Day ⚾ | Completed |
+
+---
 ## 🔗 Connect with Me on Codédex
 
 Follow my learning journey on Codédex:
