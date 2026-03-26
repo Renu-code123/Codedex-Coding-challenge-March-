@@ -1,0 +1,75 @@
+# 🪜 Flatten Array (Python)
+
+## 📌 Problem Statement
+
+Given a nested list (which may contain integers or other lists), flatten it into a single-level list.
+
+### 🔹 Example 1
+
+```
+Input: [1, [2, 3], 4, 5]
+Output: [1, 2, 3, 4, 5]
+```
+
+### 🔹 Example 2
+
+```
+Input: [1, 2, [3, [4, 5]], 6, 7]
+Output: [1, 2, 3, 4, 5, 6, 7]
+```
+
+---
+
+## 💡 Approach
+
+We use **recursion** to solve this problem:
+
+* Traverse each element in the list
+* If the element is:
+
+  * **List → recursively flatten it**
+  * **Integer → append to result**
+
+This works well because the depth of nesting is unknown.
+
+---
+
+## 🧠 Algorithm
+
+1. Initialize an empty result list
+2. Loop through each element:
+
+   * If it's a list → recursively call `flatten()`
+   * Else → append it
+3. Return the result
+
+---
+
+## 💻 Code
+
+```python
+def flatten(lst):
+    result = []
+    
+    for item in lst:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+    
+    return result
+```
+
+---
+
+## ⏱️ Complexity Analysis
+
+* **Time Complexity:** O(n)
+  Each element is processed once.
+
+* **Space Complexity:** O(n)
+
+  * Output list stores all elements
+  * Recursive stack in worst case
+
+---
